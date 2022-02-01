@@ -13,6 +13,11 @@ VALUE LABELS RCLOSE_FATHER_CAT 2'Close Father ro step Named' 1'A father or step 
 
 FREQUENCIES RCLOSE_FATHER_CAT.
 
+RECODE RCLOSE_FATHER_CAT (1=1) (2=0) (0=0) INTO RNOTCLOSE_FATHER.
+    
+FREQUENCIES RCLOSE_FATHER.
+FREQUENCIES RNOTCLOSE_FATHER.
+
 comment close father reversed with highest category a non-close father.
 
 RECODE RCLOSE_FATHER_CAT (2=1) (1=2) (0=0) INTO RCLOSE_FATHER_REVERSED.
@@ -33,6 +38,11 @@ END IF.
 VALUE LABELS RCLOSE_MOTHER_CAT 2'Close MOTHER ro step Named' 1'A MOTHER or step named but not close' 0'no MOTHER named'.
 
 FREQUENCIES RCLOSE_MOTHER_CAT.
+
+RECODE RCLOSE_MOTHER_CAT (1=1) (2=0) (0=0) INTO RNOTCLOSE_MOTHER.
+
+FREQUENCIES RCLOSE_MOTHER.
+FREQUENCIES RNOTCLOSE_MOTHER.
 
 comment close mother with highest ctegoy a non-close mother. 
 
