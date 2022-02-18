@@ -1,0 +1,8 @@
+---
+title: "math notation"
+output: html_document
+---
+
+$$
+Social\ Ties\ Beyond\ Parents = \sum_{i=0}^{n}Social\ Ties-1(fs)-1(ms)
+$$
